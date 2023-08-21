@@ -16,5 +16,5 @@ A continuacion se muestra un reporte sobre que es un analizador lexico, ademas d
 ### [Mini Analizador Lexico](Etapa_1_Analizador_Lexico/MiniAnalizadorLexico)
 
 
-### [Analizador Lexico Completo](AnalizadorLexicoCompleto/)
+### [Analizador Lexico Completo](Etapa_1_Analizador_Lexico/AnalizadorLexicoCompleto)
 ____________________________________________________________________________________
