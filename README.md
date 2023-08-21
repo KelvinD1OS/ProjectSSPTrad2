@@ -11,4 +11,5 @@ En esta primera parte de la practica lo que tiene que hacer el programa es recon
 A continuacion se muestran los links para cada practica.
 
 ### Mini Analizador Lexico
+[1 -Mini Analizador Lexico](./MiniAnalizadorLexico/)
 ### Analizador Lexico Completo
