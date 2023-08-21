@@ -10,7 +10,7 @@ ________________________________________________________________________________
 En esta primera parte de la practica lo que tiene que hacer el programa es reconocer los simbolos que recibe por el usuario y asi mostrar un resultado identificando cada simbolo que escribio el usuario. Por ultimo queda decir que son 2 practicas un mini analizador y el analizador completo.
 A continuacion se muestra un reporte sobre que es un analizador lexico, ademas de los links para cada carpeta de la practica en la cual se incluye el codigo y algunas iamgenes de como ejecutar el programa.
 
-### [Reporte](AnalizadorLexico/)
+### [Reporte](Reporte/)
 
 
 ### [Mini Analizador Lexico](MiniAnalizadorLexico/)
