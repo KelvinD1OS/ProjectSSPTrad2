@@ -13,4 +13,4 @@ A continuacion se muestran los links para cada practica.
 ### [Mini Analizador Lexico](MiniAnalizadorLexico/)
 
 
-### Analizador Lexico Completo
+### [Analizador Lexico Completo](AnalizadorLexicoCompleto/)
