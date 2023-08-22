@@ -1,17 +1,16 @@
+#Definimos la clase token un objeto con 3 valores para la salida
 class Token:
     def __init__(self, valor, tipo, tipo_num):
         self.valor = valor
         self.tipo = tipo
         self.tipo_num = tipo_num
-        
-
-
+#Definicion de la clase analizador e inicializacion de la misma
 class AnalizadorLexico:
     def __init__(self, entrada):
         self.entrada = entrada
         self.posicion = 0
         self.palabras_reservadas = ["while", "return", "else", "if"]
-
+#Una tabla con los simbolos para poder trabajar con ellos
         self.tabla_simbolos = {
             "IDENTIFICADOR": 0,
             "NUMERO_ENTERO": 1,
@@ -38,7 +37,7 @@ class AnalizadorLexico:
             "else": 22,
             "$": 23
         }
-
+#Funcion para reconocer los tokens
     def obtener_siguiente_token(self):
         while self.posicion < len(self.entrada):
             if self.entrada[self.posicion].isspace():
@@ -159,7 +158,8 @@ class AnalizadorLexico:
                     token_tipo_num = self.tabla_simbolos[token_tipo]
                     self.posicion += len(operador)  # Avanzar la longitud del operador
                     return Token(token_valor, token_tipo, token_tipo_num)
-            
+        #*********************************************************************
+        #Operador = 
             if self.entrada[self.posicion] in "=":
                 token_tipo = "="
                 token_valor = self.entrada[self.posicion]
@@ -240,7 +240,7 @@ class AnalizadorLexico:
             self.posicion += 1
         
         return None
-
+#Verifica si ya se ejecuto el script para pedirle al usuario una cadena e inicializar todo
 if __name__ == "__main__":
     entrada_usuario = input("Ingrese una cadena de texto: ")
     analizador = AnalizadorLexico(entrada_usuario)
