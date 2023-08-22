@@ -12,6 +12,7 @@ class AnalizadorLexico:
         self.palabras_reservadas = ["while", "return", "else", "if"]
 #Una tabla con los simbolos para poder trabajar con ellos
         self.tabla_simbolos = {
+            "ERROR": -1,
             "IDENTIFICADOR": 0,
             "NUMERO_ENTERO": 1,
             "NUMERO_REAL": 2,
@@ -236,6 +237,14 @@ class AnalizadorLexico:
                     self.posicion += 1
                     return Token(self.entrada[inicio:self.posicion], "CADENA", self.tabla_simbolos["CADENA"])
         #**************************************************
+        #ERROR
+            if self.entrada[self.posicion] not in self.tabla_simbolos:
+                token_tipo = "ERROR"
+                token_valor = self.entrada[self.posicion]
+                token_tipo_num = self.tabla_simbolos["ERROR"]
+                self.posicion += 1
+                return Token(token_valor, token_tipo, token_tipo_num)
+        #**************************************************
 
             self.posicion += 1
         
@@ -251,5 +260,9 @@ if __name__ == "__main__":
     
     token = analizador.obtener_siguiente_token()
     while token:
-        print("{:<18} {:<24} {:<10}".format(token.valor, token.tipo, token.tipo_num))
+        if token.tipo == "ERROR":
+            print("Error", token.valor)
+        else:
+            print("{:<18} {:<24} {:<10}".format(token.valor, token.tipo, token.tipo_num))
+        
         token = analizador.obtener_siguiente_token()
